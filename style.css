@@ -27,6 +27,17 @@ header .row {
   align-items: center;
 }
 
+header .brand-name .fa-heart {
+  color: rgba(248, 15, 25, 1);
+  font-size: 32px;
+}
+
+header .brand-name .fa-heart:hover {
+  color: blue;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
 header .brand-name a {
   text-decoration: none;
   font-size: 22px;
@@ -768,4 +779,92 @@ header .navbar ul li a.active::before {
 
 .testimonials .testimonials-content .slider-controls div.active {
   background-color: #febd01;
+}
+
+/*BLOGS SECTION*/
+.blogs {
+  padding: 100px 15px;
+  background-color: #ffffff;
+}
+
+.blogs .section-title h1::before {
+  left: 30%;
+}
+
+.blogs .blogs-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blogs .blogs-content .box {
+  flex: 0 0 calc(33.33% - 25px);
+  max-width: calc(33.33% - 25px);
+}
+.blogs .blogs-content .box .img {
+  overflow: hidden;
+}
+
+.blogs .blogs-content .box .img img {
+  width: 100%;
+  display: block;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.blogs .blogs-content .box:hover .img img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.blogs .blogs-content .box .info {
+  padding: 10px 0;
+}
+
+.blogs .blogs-content .box .info span {
+  font-size: 12px;
+  color: #838383;
+  display: inline-block;
+}
+
+.blogs .blogs-content .box .info span:nth-child(2) {
+  border-left: 1px solid #dddddd;
+  padding-left: 8px;
+  margin-left: 10px;
+}
+
+.blogs .blogs-content .box h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.blogs .blogs-content .box p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #838383;
+  margin: 0 0 10px;
+}
+
+.blogs .blogs-content .box a {
+  font-size: 14px;
+  color: #febd01;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid #febd01;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.blogs .blogs-content .box a:hover {
+  color: #000000;
+  border-color: #000000;
+  cursor: pointer;
 }

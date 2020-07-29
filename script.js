@@ -109,6 +109,7 @@ function changeSlide() {
 }
 
 function autoPlay() {
+  console.log(slideDots)
   if (autoSlide == slideDots - 1) {
     autoSlide = 0;
   } else {
