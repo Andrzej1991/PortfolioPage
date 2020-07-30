@@ -2,6 +2,10 @@
 
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -22,9 +26,30 @@ header {
   z-index: 10;
 }
 
+header.fixed {
+  background-color: #ffffff;
+  position: fixed;
+  border-color: #eeeeee;
+  animation: fixedHeader .6s ease;
+}
+
+@keyframes fixedHeader {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 header .row {
   justify-content: space-between;
   align-items: center;
+}
+
+header.fixed .brand-name a {
+  color: #000000;
 }
 
 header .brand-name .fa-heart {
@@ -68,6 +93,10 @@ header .navbar ul li a {
   position: relative;
 }
 
+header.fixed .navbar ul li a {
+  color: #000000;
+}
+
 header .navbar ul li a::before {
   content: "";
   height: 3px;
@@ -77,6 +106,10 @@ header .navbar ul li a::before {
   right: 0px;
   bottom: -1px;
   transition: all 0.5s ease;
+}
+
+header.fixed .navbar ul li a::before {
+  background-color: #febd01;
 }
 
 header .navbar ul li a:hover::before {
@@ -964,4 +997,53 @@ header .navbar ul li a.active::before {
 .contact-us .contact-form .button a:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+/*footer*/
+footer {
+  padding: 70px 15px;
+  background-color: #0c0c17;
+}
+
+footer .logo {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+footer .social {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+footer .social a {
+  color: #999999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 12px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+footer .social a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  background-color: #0c0c17;
+  border-top: 1px solid #1d1d27;
+  padding: 15px;
+}
+
+.copyright p {
+  color: #838383;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
 }
